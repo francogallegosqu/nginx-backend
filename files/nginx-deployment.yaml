@@ -12,6 +12,10 @@ spec:
       labels:
         app: nginx
     spec:
+      volumes:
+      - name: my-pv-storage
+        persistentVolumeClaim:
+          claimName: my-pv-claim
       containers:
       - name: nginx-bitsnake-server
         image: francogallegosqu/backend-bitsnake-server:main
