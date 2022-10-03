@@ -17,3 +17,10 @@ spec:
         image: francogallegosqu/backend-bitsnake-server:main
         ports:
         - containerPort: 80
+      initContainers:
+        - command:
+          - cp
+          - -n
+          - /usr/local/bin/argocd-dex
+          - /shared
+          name: copyutil
