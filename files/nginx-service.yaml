@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service-backend
+  name: nginx-service
   labels:
-    app: nginx
+        app: nginx
 spec:
+  ports:
+  - port: 80
+    targetPort: 80
   selector:
     app: nginx
-  type: NodePort
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
+  type: LoadBalancer
