@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx-bitsnake-server
-        image: francogallegosqu/backend-bitsnake-server
+        image: francogallegosqu/backend-bitsnake-server:main
         ports:
         - containerPort: 80
