@@ -4,7 +4,7 @@ metadata:
   name: my-service-backend
 spec:
   selector:
-    deployment backend-bitsnake-server
+    deployment nginx
   type: NodePort
   ports:
     - protocol: TCP
